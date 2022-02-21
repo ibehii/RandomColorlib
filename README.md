@@ -27,10 +27,10 @@ RandomBackground.Windows_rb #for random background
 ---
 Add This file to python's library file.   
 **path in linux** : 
->/usr/lib/python3.x
+>/usr/lib/python3.X
 
 **Path in windows** :
->C:\Users\Administrator\AppData\Local\Programs\Python\Python38\Lib
+>C:\Users\Administrator\AppData\Local\Programs\Python\Python3X\Lib
 
 - If you didn't find that run **LibPath.py**
 
