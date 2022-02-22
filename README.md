@@ -32,5 +32,5 @@ Add This file to python's library file.
 **Path in windows** :
 >C:\Users\Administrator\AppData\Local\Programs\Python\Python3X\Lib
 
-- If you didn't find that run **LibPath.py**
+- If you didn't find that run **setup.py**
 
