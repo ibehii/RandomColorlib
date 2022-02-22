@@ -20,7 +20,7 @@ if name == 'posix' :
 
 
 else:
-    COPY= input('Do you want to copy RandomColor to there? [please open Terminal as adminstore for this operation] ')
+    COPY= input('Do you want to copy RandomColor to there? [please open Terminal as administrator for this operation] ')
     if( COPY == 'Yes' or COPY == 'yes' or COPY == 'YES' ):
         shutil.copy('RandomColor.py', ospath)
         print("It's done !")
