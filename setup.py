@@ -1,5 +1,5 @@
-# Github: https: // github.com/beh185
-# Telegram: https: // T.me/dr_xz
+# Github: https://github.com/beh185
+# Telegram: https://T.me/dr_xz
 # e-mail: BehnamH.dev@gmail.com
 # ____________________________________________
 
