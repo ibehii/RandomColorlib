@@ -1,9 +1,9 @@
 # Random Color 
 
-https://user-images.githubusercontent.com/79264026/154797996-81cd97c1-d433-480c-9d10-fff917aa10ec.mp4
+![](https://user-images.githubusercontent.com/79264026/154797996-81cd97c1-d433-480c-9d10-fff917aa10ec.mp4)
      
-     
-    
+         
+
 On this python library you can access 255 kind of color in random!
 **There is just 15 colors for windows users :(**
 ## features
@@ -14,17 +14,26 @@ On this python library you can access 255 kind of color in random!
 
 ---
 **Windows Users** have to install colorama.
-To install : 
+for installing : 
 
 `pip install colorama`
 
-### **Notes for commends** 
+## **Important tip**
 windows terminal can't support all colors so it's better use :
 ``` python 
-RandomColor.Windows_rc #for random color
-RandomBackground.Windows_rb #for random background
+RandomColor.Windows_rc() # random color
+RandomBackground.Windows_rb() # random background
+``` 
+- You can use **Auto** part too, Which doesn't depend on the operating system and automatically detects the operating system
+```python
+RandomColor.Auto_rc() # Automatic random color
+RandomColor.Auto_rb() # Automatic random background
 ```
+
+for using random style(font) : `RandomColor.rs()`
+
 ---
+
 Add This file to python's library file.   
 **path in linux** : 
 >/usr/lib/python3.X
