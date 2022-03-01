@@ -5,7 +5,8 @@
 
 #import part
 from random import randint
-from os import name
+import os
+
 
 
 ### Random color for linux terminal ###
@@ -1697,15 +1698,17 @@ def rs (user_request):
 
 
 def Auto_rc (user_request):
-	name = name
+	name = os.name
 	if (name == "posix"):
 		return rc(user_request)
 	else:
 		return Windows_rc
 
 def Auto_rb (user_request):
-	name = name
+	name = os.name
 	if(name == 'posix'):
 		return rb(user_request)
 	else:
 		return Windows_rb(user_request)	
+
+print(Auto_rc('behnam'))
