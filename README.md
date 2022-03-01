@@ -33,7 +33,7 @@ RandomColor.Auto_rb() # Automatic random background
 for using random style(font) : `RandomColor.rs()`
 
 ---
-
+## Installation 
 Add This file to python's library file.   
 **path in linux** : 
 >/usr/lib/python3.X
