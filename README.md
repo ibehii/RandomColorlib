@@ -1,6 +1,6 @@
 # Random Color 
 
-![](https://user-images.githubusercontent.com/79264026/154797996-81cd97c1-d433-480c-9d10-fff917aa10ec.mp4)
+https://user-images.githubusercontent.com/79264026/154797996-81cd97c1-d433-480c-9d10-fff917aa10ec.mp4
      
          
 
