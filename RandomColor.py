@@ -1710,5 +1710,3 @@ def Auto_rb (user_request):
 		return rb(user_request)
 	else:
 		return Windows_rb(user_request)	
-
-print(Auto_rc('behnam'))
