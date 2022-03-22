@@ -35,5 +35,5 @@ Rcolor.Auto_rb() # Automatic random background
 for using random style(font) : `Rcolor.rs()`
 
 ## installtion with pip 
-`pip install RandomColorlib==0.0.1`
+`pip install RandomColorlib`
 
