@@ -10,9 +10,9 @@ ospath = os.__file__
 ospath = ospath.replace('/os.py', '')
 print('Your modules are in : ', ospath)
 if name == 'posix' : 
-    COPY = input('Do you want to copy RandomColor to there? [We will need sudo access] ')
+    COPY = input('Do you want to copy RandomColorlib to there? [We will need sudo access] ')
     if(COPY == 'Yes' or COPY == 'yes' or COPY == 'YES'):
-        os.system(f'sudo cp -r RandomColor.py {ospath}')
+        os.system(f'sudo cp -r Rcolor.py {ospath}')
         print("It's done !")
     else:
         print('Copying failed.')
@@ -20,9 +20,9 @@ if name == 'posix' :
 
 
 else:
-    COPY= input('Do you want to copy RandomColor to there? [please open Terminal as administrator for this operation] ')
+    COPY= input('Do you want to copy RandomColorlib to there? [please open Terminal as administrator for this operation] ')
     if( COPY == 'Yes' or COPY == 'yes' or COPY == 'YES' ):
-        shutil.copy('RandomColor.py', ospath)
+        shutil.copy('Rcolor.py', ospath)
         print("It's done !")
     else:
         print('Copying failed.')
