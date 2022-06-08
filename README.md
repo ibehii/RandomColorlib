@@ -3,11 +3,10 @@
 
      
 
-https://user-images.githubusercontent.com/79264026/162411853-3d8c072d-2b79-441e-8346-8bb43837689e.mp4
+https://user-images.githubusercontent.com/79264026/172701097-337571d8-23fd-45a1-8cdc-72b97acc0176.mp4
 
 
-         
-
+        
 On this python library you can access 255 kind of color randomly!
 **There is just 15 colors for windows users :(**
 ## features
