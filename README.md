@@ -1,4 +1,4 @@
-# Random Color 
+# Random Color library for python
 
 
      
@@ -8,33 +8,46 @@ https://user-images.githubusercontent.com/79264026/162411853-3d8c072d-2b79-441e-
 
          
 
-On this python library you can access 255 kind of color in random!
+On this python library you can access 255 kind of color randomly!
 **There is just 15 colors for windows users :(**
 ## features
 
 - Random color 
 - Random background
 - Random style
+- Random color with random background
+- Random color with random style
+- Random background with random style
+- Random color with random background and random style
 
 ---
-**Windows Users** have to install colorama.
+**Windows Users** have to install [colorama](https://pypi.org/project/colorama/).
 for installing : 
 
-`pip install colorama`
+>pip install colorama
 
 ## **Important tip**
-windows terminal can't support all colors so it's better use :
+cmd can't support all colors so it's better use :
 ``` python 
-from RandomColorlib import Rcolor
-Rcolor.Windows_rc() # random color
-Rcolor.Windows_rb() # random background
+import Rcolor
+Rcolor.windows_color("Hello world") # random color
+Rcolor.windows_background("Hello world") # random background
 ``` 
 - You can use **Auto** part too, Which doesn't depend on the operating system and automatically detects the operating system
 ```python
-from RandomColorlib import Rcolor
-Rcolor.Auto_rc() # Automatic random color
-Rcolor.Auto_rb() # Automatic random background
+import Rcolor
+Rcolor.auto_color("Hello world") # Automatic random color
+Rcolor.auto_background("Hello world") # Automatic random background
 ```
 
-for using random style(font) : `Rcolor.rs()`
+for using random style(font) :
+>`Rcolor.style("Hello world")`
 
+### Multiple capabilities ###
+```python
+import Rcolor
+Rcolor.color_background("Hello world") # Random color with Random background
+Rcolor.color_style("Hello world") # Random color with Random style
+Rcolor.background_style("Hello world") # Random background with style
+Rcolor.color_background_style("Hello world") # Random color with random background and random style
+```
