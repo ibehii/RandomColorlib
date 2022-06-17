@@ -3,16 +3,26 @@
 # e-mail: BehnamH.dev@gmail.com
 # ____________________________________________
 
+# import part
 import os
 import shutil
-name = os.name
-ospath = os.__file__
-ospath = ospath.replace('/os.py', '')
-print('Your modules are in : ', ospath)
-if name == 'posix' : 
-    COPY = input('Do you want to copy RandomColorlib to there? [We will need sudo access] ')
-    if(COPY == 'Yes' or COPY == 'yes' or COPY == 'YES' or COPY == 'y' or COPY == 'Y'):
-        os.system(f'sudo cp -r Rcolor.py {ospath}')
+
+# get operating system name
+os_name = os.name
+
+# get modules of python path
+module_path = os.__file__
+
+if os_name == 'nt':
+    module_path = module_path.replace('\os.py', '')
+    print('Your modules are in : ', module_path)
+
+    # get permission to copy randomcolorlib to modules folder
+    copy_permision = input(
+        'Do you want to add RandomColorlib to your modules? [please open Terminal as administrator for this operation] -> '
+        )
+    if (copy_permision == 'Yes' or copy_permision == 'yes' or copy_permision == 'YES' or copy_permision == 'y' or copy_permision == 'Y'):
+        shutil.copy_permision('Rcolor.py', module_path)
         print("It's done !")
     else:
         print('Copying failed.')
@@ -20,12 +30,15 @@ if name == 'posix' :
 
 
 else:
-    COPY= input('Do you want to copy RandomColorlib to there? [please open Terminal as administrator for this operation] ')
-    if( COPY == 'Yes' or COPY == 'yes' or COPY == 'YES' ):
-        shutil.copy('Rcolor.py', ospath)
+    module_path = module_path.replace('/os.py', '')
+    print('Your modules are in : ', module_path)
+
+    # get permission to copy randomcolorlib to modules folder
+    copy_permision = input(
+        'Do you want to add RandomColorlib to your modules? [sudo access required] -> '
+        )
+    if (copy_permision == 'Yes' or copy_permision == 'yes' or copy_permision == 'YES' or copy_permision == 'y' or copy_permision == 'Y'):
+        os.system(f'sudo cp -r Rcolor.py {module_path}')
         print("It's done !")
     else:
         print('Copying failed.')
-
-
-
