@@ -22,7 +22,7 @@ if os_name == 'nt':
         'Do you want to add RandomColorlib to your modules? [please open Terminal as administrator for this operation] -> '
         )
     if (copy_permision == 'Yes' or copy_permision == 'yes' or copy_permision == 'YES' or copy_permision == 'y' or copy_permision == 'Y'):
-        shutil.copy_permision('Rcolor.py', module_path)
+        shutil.copy( module_path, 'Rcolor.py')
         print("It's done !")
     else:
         print('Copying failed.')
