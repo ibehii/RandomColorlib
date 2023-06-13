@@ -21,7 +21,7 @@ if os_name == 'nt':
     copy_permision = input(
         'Do you want to add RandomColorlib to your modules? [please open Terminal as administrator for this operation] -> '
         )
-    if (copy_permision == 'Yes' or copy_permision == 'yes' or copy_permision == 'YES' or copy_permision == 'y' or copy_permision == 'Y'):
+    if (copy_permision.lower() == 'yes' or copy_permision.lower() == 'y'):
         shutil.copy( module_path, 'Rcolor.py')
         print("It's done !")
     else:
@@ -37,7 +37,7 @@ else:
     copy_permision = input(
         'Do you want to add RandomColorlib to your modules? [sudo access required] -> '
         )
-    if (copy_permision == 'Yes' or copy_permision == 'yes' or copy_permision == 'YES' or copy_permision == 'y' or copy_permision == 'Y'):
+    if (copy_permision.lower() == 'yes' or copy_permision.lower() == 'y'):
         os.system(f'sudo cp -r Rcolor.py {module_path}')
         print("It's done !")
     else:
