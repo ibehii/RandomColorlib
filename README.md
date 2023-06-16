@@ -29,24 +29,24 @@ for installing :
 cmd can't support all colors so it's better use :
 ``` python 
 import Rcolor
-Rcolor.windows_color("Hello world") # random color
-Rcolor.windows_background("Hello world") # random background
+print(Rcolor.windows_color("Hello world")) # random color
+print(Rcolor.windows_background("Hello world")) # random background
 ``` 
 - You can use **Auto** part too, Which doesn't depend on the operating system and automatically detects the operating system
 ```python
 import Rcolor
-Rcolor.auto_color("Hello world") # Automatic random color
-Rcolor.auto_background("Hello world") # Automatic random background
+print(Rcolor.auto_color("Hello world")) # Automatic random color
+print(Rcolor.auto_background("Hello world")) # Automatic random background
 ```
 
 for using random style(font) :
->`Rcolor.style("Hello world")`
+>print(`Rcolor.style("Hello world"))`
 
 ### Multiple capabilities ###
 ```python
 import Rcolor
-Rcolor.color_background("Hello world") # Random color with Random background
-Rcolor.color_style("Hello world") # Random color with Random style
-Rcolor.background_style("Hello world") # Random background with style
-Rcolor.color_background_style("Hello world") # Random color with random background and random style
+print(Rcolor.color_background("Hello world")) # Random color with Random background
+print(Rcolor.color_style("Hello world")) # Random color with Random style
+print(Rcolor.background_style("Hello world")) # Random background with style
+print(Rcolor.color_background_style("Hello world")) # Random color with random background and random style
 ```
