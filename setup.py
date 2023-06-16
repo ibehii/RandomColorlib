@@ -20,9 +20,9 @@ def windows_installer():
         )
     if (copy_permission.lower() == 'yes' or copy_permission.lower() == 'y'):
         shutil.copy( module_path, 'Rcolor.py')
-        return("It's done !")
+        print("It's done !")
     else:
-        return('Copying failed.')
+        print('Copying failed.')
 
 def linux_installer():
 
@@ -41,9 +41,9 @@ def linux_installer():
         )
     if (copy_permission.lower() == 'yes' or copy_permission.lower() == 'y'):
         os.system(f'sudo cp -r Rcolor.py {module_path}')
-        return("It's done !")
+        print("It's done !")
     else:
-        return('Copying failed.')
+        print('Copying failed.')
     
 def installer():
     # get operating system name
