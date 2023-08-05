@@ -2,57 +2,28 @@
 # Telegram: https://T.me/dr_xz
 # e-mail: BehnamH.dev@gmail.com
 # ____________________________________________
-def windows_installer():
-    # import part
-    import os
-    import shutil
-    # getting python modules's path
-    module_path = os.__file__
-    os.system('pip install colorama')
-    os.system('cls')
-    
-    module_path = module_path.replace('\os.py', '')
-    print('Your modules are in : ', module_path)
 
-    # getting permission to copy Randomcolorlib to modules folder
-    copy_permission = input(
-        'Do you want to add RandomColorlib to your modules[y/n]? (please open Terminal as administrator for this operation) -> '
+from setuptools import setup, find_packages
+
+with open(__file__.replace('setup.py', 'README.md'), 'r') as f:
+    long_description = f.read()
+
+setup(
+        name="RandomColor",
+        version='2.0.0',
+        description='A library that make your output colorful in python',
+        long_description=long_description,
+        author='Behnam',
+        author_email='Behii@tutanota.com',
+        url='https://github.com/beh185/RandomColorlib',
+        license='MIT',
+        keywords='Randomly change your output color',
+        packages=find_packages(),
+        include_package_data=True,
+        install_requires=['colorama'],
+        python_requires='~=3.6',
+        classifiers=[
+        "Programming Language :: Python :: 3",
+        "Operating System :: OS Independent",
+    ],
         )
-    if (copy_permission.lower() == 'yes' or copy_permission.lower() == 'y'):
-        shutil.copy( module_path, 'Rcolor.py')
-        print("It's done !")
-    else:
-        print('Copying failed.')
-
-def linux_installer():
-
-    # import part
-    import os
-
-    # getting python modules's path
-    module_path = os.__file__
-    module_path = module_path.replace('/os.py', '')
-
-    print('Your modules are in : ', module_path)
-
-    # getting permission to copy Randomcolorlib to modules folder
-    copy_permission = input(
-        'Do you want to add RandomColorlib to your modules? [Root access required] -> '
-        )
-    if (copy_permission.lower() == 'yes' or copy_permission.lower() == 'y'):
-        os.system(f'sudo cp -r Rcolor.py {module_path}')
-        print("It's done !")
-    else:
-        print('Copying failed.')
-    
-def installer():
-    # get operating system name
-    from os import name
-    os_name = name
-    if os_name == 'nt':
-        windows_installer()
-    else:
-        linux_installer()
-
-if __name__ == '__main__':
-    installer()
