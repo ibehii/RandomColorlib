@@ -1,52 +1,101 @@
-# Random Color library for python
+# Random Color library
 
-
-     
 
 https://user-images.githubusercontent.com/79264026/172701097-337571d8-23fd-45a1-8cdc-72b97acc0176.mp4
 
 
-        
-On this python library you can access 255 kind of color randomly!
-**There is just 15 colors for windows users :(**
+**This python library makes your terminal output colorful ✨**\
+On this python library you can access 255 kind of color randomly!\
+**There is just 15 colors for windows(***cmd***) users 😥**
+## YouTube Tutorial 📹
+# installation 
+for installation first make sure that you're in **RandomColorlib** folder which **setup.py** exist.\
+then enter this command in your terminal:
+> `pip install .`
 ## features
 
-- Random color 
-- Random background
-- Random style
-- Random color with random background
-- Random color with random style
-- Random background with random style
-- Random color with random background and random style
+- [Change front color](#changing-front-color)
+- [Change background color](#changing-background-color)
+- [Change font (style)](#change-font-style)
+- [Change front color with background color at same time](#multiple-capabilities)
+- [Change front color with font at same time](#multiple-capabilities)
+- [Change background with font at same time](#multiple-capabilities)
+- [Change front color with background color and font at the same time](#multiple-capabilities)
 
 ---
-**Windows Users** have to install [colorama](https://pypi.org/project/colorama/).
-for installing : 
+# Usage
+## importing
+For importing the library You can use:
+```python 
+# First way 
+import RandomColor
+RandomColor.Rcolor.<Module Name>
 
->pip install colorama
+# Easier way
+from RandomColor import Rcolor
+
+# For importing all modules:
+from RandomColor.Rcolor import * 
+```
+------
 
 ## **Important tip**
 cmd can't support all colors so it's better use :
 ``` python 
-import Rcolor
-print(Rcolor.windows_color("Hello world")) # random color
-print(Rcolor.windows_background("Hello world")) # random background
+from RandomColor import Rcolor
+
+print(Rcolor.windows_color("Hello, World")) # random color
+print(Rcolor.windows_background("Hello, World")) # random background
 ``` 
 - You can use **Auto** part too, Which doesn't depend on the operating system and automatically detects the operating system
+
 ```python
-import Rcolor
-print(Rcolor.auto_color("Hello world")) # Automatic random color
-print(Rcolor.auto_background("Hello world")) # Automatic random background
+from RandomColor import Rcolor
+
+print(Rcolor.auto_color("Hello, World")) # Automatic random color
+print(Rcolor.auto_background("Hello, World")) # Automatic random background
 ```
 
-for using random style(font) :
->print(`Rcolor.style("Hello world"))`
-
-### Multiple capabilities ###
+## Changing front color 
+**Make Sure to check [Important tip](#important-tip)**
 ```python
-import Rcolor
-print(Rcolor.color_background("Hello world")) # Random color with Random background
-print(Rcolor.color_style("Hello world")) # Random color with Random style
-print(Rcolor.background_style("Hello world")) # Random background with style
-print(Rcolor.color_background_style("Hello world")) # Random color with random background and random style
+from RandomColor import Rcolor
+
+print(Rcolor.color('Hello, World!'))
+print(Rcolor.windows_color("Hello, World")) 
+```
+----
+## Changing Background color
+**Make Sure to check [Important tip](#important-tip)**
+
+```python
+from RandomColor import Rcolor
+
+print(Rcolor.background('Hello, World'))
+print(Rcolor.windows_background('Hello, World')) 
+```
+## Changing font (style)
+**Make Sure to check [Important tip](#important-tip)**
+
+```python
+from RandomColor import Rcolor
+Rcolor.style('Hello, World!')
+```
+---
+
+## Multiple capabilities
+```python
+from RandomColor import Rcolor
+
+# Change front color with background color at same time
+Rcolor.color_background("Hello world")
+
+# Change front color with font at same time
+Rcolor.color_style("Hello world")
+
+# Change background with font at same time
+Rcolor.background_style("Hello world")
+
+# Change front color with background color and font at the same time
+Rcolor.color_background_style("Hello world") 
 ```
