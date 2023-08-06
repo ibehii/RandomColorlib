@@ -19,6 +19,7 @@ setup(
         license='MIT',
         keywords='Randomly change your output color',
         packages=find_packages(),
+        package_data={'' : ['*.json']},
         include_package_data=True,                                                  
         install_requires=['colorama'],
         python_requires='~=3.6',
