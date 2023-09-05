@@ -5,11 +5,11 @@ https://user-images.githubusercontent.com/79264026/172701097-337571d8-23fd-45a1-
 
 
 **This python library makes your terminal output colorful ✨**\
-On this python library you can access 255 kind of color randomly!\
-**There is just 15 colors for windows(***cmd***) users 😥**
+On this Python library, you can access 255 kind of color randomly!\
+**There are just 15 colors for windows(***cmd***) users 😥**
 ## YouTube Tutorial 📹
 # installation 
-for installation first make sure that you're in **RandomColorlib** folder which **setup.py** exist.\
+for installation, first make sure that you're in **RandomColorlib** folder, which **setup.py** exists, \
 then enter this command in your terminal:
 > `pip install .`
 ## features
