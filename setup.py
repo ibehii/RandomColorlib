@@ -10,6 +10,7 @@ setup(
         version='2.0.0',
         description='A library that make your output colorful in python',
         long_description='A library that make your output colorful in python',
+        long_description_content_type='`text/x-rst`',
         author='Behnam',
         author_email='Behii@tutanota.com',
         url='https://github.com/beh185/RandomColorlib',
