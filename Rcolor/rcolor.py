@@ -3,24 +3,25 @@
 # e-mail: Behii@tutanota.com
 # ____________________________________________
 
-# import part
+# ======== # import built-in library # ======== #
 from random import choice 
 from os import name
 from json import load
 
-# random color
-
-def color (*user_input):
+# ======== # random front color # ======== #
+def color (*user_input) -> str:
+    ''''''
     try:
-        # Opening json file that contain colors code in windows and linux
-        if name == 'nt':
-            json_paths = __file__.replace('Rcolor.py', 'colors\colors.json')
+        # ====== # Opening json file that contain colors code in windows and linux # ====== #
+        if(name == 'nt'):
+            json_paths: str = __file__.replace('Rcolor.py', 'colors\\colors.json')
         else:    
-            json_paths = __file__.replace('Rcolor.py', 'colors/colors.json')
+            json_paths: str = __file__.replace('Rcolor.py', 'colors/colors.json')
         with open(json_paths , 'r') as f:
-            colors = load(f).get("colors")
+            colors: list[str] = load(f).get("colors")
         user_input = list(user_input)
-        # make all item in user_input list to string 
+        
+        # ======== # make all item in user_input list to string  # ======== #
         for i in user_input:
             if type(i) == str:
                 pass
@@ -28,7 +29,7 @@ def color (*user_input):
                 user_input[user_input.index(i)] = str(i)
 
         user_input = ''.join(user_input)
-        random_color = choice(colors)
+        random_color: str = choice(colors)
         
         return random_color + user_input + '\033[0m'
     except FileNotFoundError:
@@ -38,19 +39,19 @@ def color (*user_input):
         pass
         return('\33[31m' + f'Input type {type(i)} is not supported' + '\033[0m')
 
-# random background color
-def background (*user_input):
+# ======== # random background color # ======== #
+def background (*user_input) -> str:
     try:
-        # Opening json file that contain colors code in windows and linux
+        # ====== # Opening json file that contain colors code in windows and linux # ====== #
         if name == 'nt':
-            json_paths = __file__.replace('Rcolor.py', 'colors\background_color.json')
+            json_paths: str = __file__.replace('Rcolor.py', 'colors\background_color.json')
         else:    
-            json_paths = __file__.replace('Rcolor.py', 'colors/background_color.json')
+            json_paths: str = __file__.replace('Rcolor.py', 'colors/background_color.json')
         with open(json_paths, 'r') as f:
-            background_color = load(f).get("background_color")
+            background_color: list[str] = load(f).get("background_color")
         user_input = list(user_input)
 
-        # make all item in user_input list to string
+        # ======== # make all item in user_input list to string # ======== #
         for i in user_input:
             if type(i) == str:
                 pass
@@ -58,7 +59,7 @@ def background (*user_input):
                 user_input[user_input.index(i)] = str(i)
 
         user_input = ''.join(user_input)
-        random_color = choice(background_color)
+        random_color: str = choice(background_color)
         return random_color + user_input + '\033[0m'
     except FileNotFoundError:
         pass
@@ -67,19 +68,19 @@ def background (*user_input):
         pass
         return('\33[31m' + f'Input type {type(i)} is not supported' + '\033[0m')
 
-# random Windows color
-def windows_color(*user_input):
+# ======== # Random Windows color # ======== #
+def windows_color(*user_input) -> str:
     try:
-        # Opening json file that contain colors code in windows and linux
+        # ====== # Opening json file that contain colors code in windows and linux # ====== #
         if name == 'nt':
-            json_paths = __file__.replace('Rcolor.py', 'colors\Windows_color.json')
+            json_paths: str = __file__.replace('Rcolor.py', 'colors\\Windows_color.json')
         else:    
-            json_paths = __file__.replace('Rcolor.py', 'colors/Windows_color.json')
+            json_paths: str = __file__.replace('Rcolor.py', 'colors/Windows_color.json')
         with open(json_paths, 'r') as f:
-            windows_color = load(f).get("Windows_color")
+            windows_color: list[str] = load(f).get("Windows_color")
         user_input = list(user_input)
 
-        # make all item in user_input list to string
+        # ======== # make all item in user_input list to string # ======== #
         for i in user_input:
             if type(i) == str:
                 pass
@@ -88,7 +89,7 @@ def windows_color(*user_input):
         from colorama import init
         init()
         user_input = ''.join(user_input)
-        random_color = choice(windows_color)
+        random_color: str = choice(windows_color)
         return random_color + user_input + '\033[0m'
     except FileNotFoundError:
         pass
@@ -97,21 +98,21 @@ def windows_color(*user_input):
         pass
         return('\33[31m' + f'Input type {type(i)} is not supported' + '\033[0m')
 
-# random Windows background color
-def windows_background(*user_input): 
+# ======== # Random Windows background color # ======== #
+def windows_background(*user_input) -> str : 
     try:
-        # Opening json file that contain colors code in windows and linux
+        # ====== # Opening json file that contain colors code in windows and linux # ====== #
         if name == 'nt':
-            json_paths = __file__.replace('Rcolor.py', 'colors\Windows_background.json')
+            json_paths: str = __file__.replace('Rcolor.py', 'colors\\Windows_background.json')
         else:    
-            json_paths = __file__.replace('Rcolor.py', 'colors/Windows_background.json')
+            json_paths: str = __file__.replace('Rcolor.py', 'colors/Windows_background.json')
         with open(json_paths, 'r') as f:
-            Windows_background = load(f).get("Windows_background")
+            Windows_background: list[str] = load(f).get("Windows_background")
         from colorama import init
         init()
         user_input = list(user_input)
 
-        # make all item in user input_list to string
+        # ======== # make all item in user input_list to string # ======== #
         for i in user_input:
             if type(i) == str:
                 pass
@@ -119,7 +120,7 @@ def windows_background(*user_input):
                 user_input[user_input.index(i)] = str(i)
 
         user_input = ''.join(user_input)
-        random_color = choice(Windows_background)
+        random_color: str = choice(Windows_background)
         return random_color + user_input + '\033[0m'
     except FileNotFoundError:
         pass
@@ -128,18 +129,20 @@ def windows_background(*user_input):
         pass
         return('\33[31m' + f'Input type {type(i)} is not supported' + '\033[0m')
 
-# random style
-def style(*user_input):
-    # Opening json file that contain colors code in windows and linux
-    if name == 'nt':
-        json_paths = __file__.replace('Rcolor.py', 'colors\style1.json')
-    else:    
-        json_paths = __file__.replace('Rcolor.py', 'colors/style1.json')
-    try:    
+# ======== # Random style # ======== #
+def style(*user_input) -> str:
+
+    try:   
+        # ====== # Opening json file that contain colors code in windows and linux # ====== #
+        if name == 'nt':
+            json_paths: str = __file__.replace('Rcolor.py', 'colors\\style1.json')
+        else:    
+            json_paths: str = __file__.replace('Rcolor.py', 'colors/style1.json')
         with open(json_paths, 'r') as f:
-            style1 = load(f).get("style1")
+            style1: list[str] = load(f).get("style1")
         user_input = list(user_input)
-        # make all item in user_input list to string
+        
+        # ======== # make all item in user_input list to string # ======== #
         for i in user_input:
             if type(i) == str:
                 pass
@@ -147,7 +150,7 @@ def style(*user_input):
                 user_input[user_input.index(i)] = str(i)
 
         user_input = ''.join(user_input)
-        random_color = choice(style1)
+        random_color: str = choice(style1)
         return random_color + user_input + '\033[0m'
     except FileNotFoundError:
         pass
@@ -156,8 +159,8 @@ def style(*user_input):
         pass
         return('\33[31m' + f'Input type {type(i)} is not supported' + '\033[0m')
 
-# Automatically detects the operating system and return the correct color
-def auto_color(*user_input):
+# ======== # Automatically detects the operating system and return the correct color # ======== #
+def auto_color(*user_input) -> str:
     user_input = list(user_input)
     for i in user_input:
         if type(i) == str:
@@ -171,8 +174,8 @@ def auto_color(*user_input):
     else:
         return color(user_input)
 
-# Automatically detects the operating system and return the correct background color
-def auto_background(*user_input):
+# ======== # Automatically detects the operating system and return the correct background color # ======== #
+def auto_background(*user_input) -> str:
     user_input = list(user_input)
     for i in user_input:
         if type(i) == str:
@@ -186,8 +189,8 @@ def auto_background(*user_input):
     else:
         return background(user_input)
 
-# return random color and background color
-def color_background (*user_input):
+# ======== # return random color and background color # ======== #
+def color_background (*user_input) -> str:
     user_input = list(user_input)
     for i in user_input:
         if type(i) == str:
@@ -198,8 +201,8 @@ def color_background (*user_input):
     user_input = ''.join(user_input)
     return auto_color(auto_background(user_input))
 
-# return random color and style
-def color_style (*user_input):
+# ======== # return random color and style # ======== #
+def color_style (*user_input) -> str:
     user_input = list(user_input)
     for i in user_input:
         if type(i) == str:
@@ -210,8 +213,8 @@ def color_style (*user_input):
     user_input = ''.join(user_input)
     return auto_color(style(user_input))
 
-# return random background color and style
-def background_style (*user_input):
+# ======== # return random background color and style # ======== #
+def background_style (*user_input) -> str:
     user_input = list(user_input)
     for i in user_input:
         if type(i) == str:
@@ -222,8 +225,8 @@ def background_style (*user_input):
     user_input = ''.join(user_input)
     return auto_background(style(user_input))
 
-# return random color and background color and style
-def color_background_style (*user_input):
+# ======== # return random color and background color and style # ======== #
+def color_background_style (*user_input) -> str:
     user_input = list(user_input)
     for i in user_input:
         if type(i) == str:
