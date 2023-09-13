@@ -27,21 +27,21 @@ For installation, enter this command in your terminal:
 For importing the library You can use the following:
 ```python 
 # First way 
-import RandomColor
-RandomColor.Rcolor.<Module Name>
+import Rcolor
+Rcolor.<Module Name>
 
 # Easier way
-from RandomColor import Rcolor
+from Rcolor import <Module Name>
 
-# For importing all modules:
-from RandomColor.Rcolor import * 
+# For importing all modules (Not recommended):
+from Rcolor import * 
 ```
 ------
 
 ## **Important tip**
 cmd can't support all colors so it's better to use :
 ``` python 
-from RandomColor import Rcolor
+import Rcolor
 
 print(Rcolor.windows_color("Hello, World")) # random color
 print(Rcolor.windows_background("Hello, World")) # random background
@@ -49,7 +49,7 @@ print(Rcolor.windows_background("Hello, World")) # random background
 - You can use the **Auto** part too, Which doesn't depend on the operating system and automatically detects the operating system
 
 ```python
-from RandomColor import Rcolor
+import Rcolor
 
 print(Rcolor.auto_color("Hello, World")) # Automatic random color
 print(Rcolor.auto_background("Hello, World")) # Automatic random background
@@ -58,7 +58,7 @@ print(Rcolor.auto_background("Hello, World")) # Automatic random background
 ## Changing font color 
 **Make Sure to check [Important tip](#important-tip)**
 ```python
-from RandomColor import Rcolor
+import Rcolor
 
 print(Rcolor.color('Hello, World!'))
 print(Rcolor.windows_color("Hello, World")) 
@@ -68,7 +68,7 @@ print(Rcolor.windows_color("Hello, World"))
 **Make Sure to check [Important tip](#important-tip)**
 
 ```python
-from RandomColor import Rcolor
+import Rcolor
 
 print(Rcolor.background('Hello, World'))
 print(Rcolor.windows_background('Hello, World')) 
@@ -77,14 +77,14 @@ print(Rcolor.windows_background('Hello, World'))
 **Make Sure to check [Important tip](#important-tip)**
 
 ```python
-from RandomColor import Rcolor
+import Rcolor
 Rcolor.style('Hello, World!')
 ```
 ---
 
 ## Multiple capabilities
 ```python
-from RandomColor import Rcolor
+import Rcolor
 
 # Change front color with background color at the same time
 Rcolor.color_background("Hello world")
