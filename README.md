@@ -9,17 +9,16 @@ On this Python library, you can access 255 kinds of color randomly!\
 **There are just 15 colors for windows(***cmd***) users 😥**
 ## YouTube Tutorial 📹
 # installation 
-for installation, first make sure that you're in **RandomColorlib** folder, which **setup.py** exists, \
-then enter this command in your terminal:
-> `pip install .`
+For installation, enter this command in your terminal:
+> `pip install Rcolor==2.0.0`
 ## features
 
 - [Change front color](#changing-front-color)
 - [Change background color](#changing-background-color)
 - [Change font (style)](#change-font-style)
-- [Change front color with background color at same time](#multiple-capabilities)
-- [Change front color with font at same time](#multiple-capabilities)
-- [Change background with font at same time](#multiple-capabilities)
+- [Change front color with background color at the same time](#multiple-capabilities)
+- [Change front color with font at the same time](#multiple-capabilities)
+- [Change background with font at the same time](#multiple-capabilities)
 - [Change front color with background color and font at the same time](#multiple-capabilities)
 
 ---
@@ -96,6 +95,6 @@ Rcolor.color_style("Hello world")
 # Change background with font at the same time
 Rcolor.background_style("Hello world")
 
-# Change front color with background color and font at the same time
+# Change front color with the background color and font at the same time
 Rcolor.color_background_style("Hello world") 
 ```
