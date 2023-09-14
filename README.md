@@ -1,4 +1,7 @@
 # Random Color library
+
+🔴 **The name of modules in this library will change soon.**
+
 [![CodeQL](https://github.com/beh185/RandomColorlib/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/beh185/RandomColorlib/actions/workflows/codeql.yml)
 
 https://user-images.githubusercontent.com/79264026/172701097-337571d8-23fd-45a1-8cdc-72b97acc0176.mp4
