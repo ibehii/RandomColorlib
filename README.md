@@ -10,7 +10,7 @@ On this Python library, you can access 255 kinds of color randomly!\
 ## YouTube Tutorial 📹
 # installation 
 For installation, enter this command in your terminal:
-> `pip install Rcolor==2.0.0`
+> `pip install Rcolor==2.0.3`
 ## features
 
 - [Change front color](#changing-front-color)
