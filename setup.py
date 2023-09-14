@@ -10,7 +10,7 @@ with open(__file__.replace('setup.py', 'README.md'), 'r') as f:
 
 setup(
         name="Rcolor",
-        version='2.0.0',
+        version='2.0.3',
         description='A library that make your output colorful in python',
         long_description=long_description,
         long_description_content_type='text/markdown',
