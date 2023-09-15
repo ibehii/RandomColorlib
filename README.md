@@ -6,21 +6,21 @@ https://user-images.githubusercontent.com/79264026/172701097-337571d8-23fd-45a1-
 
 
 **This Python library makes your terminal output colorful ✨**\
-On this Python library, you can access 255 kinds of color randomly!\
+On this Python library, you can access 255 kinds of color randomly!
 ## YouTube Tutorial 📹
 # installation 
 For installation, enter this command in your terminal:
-> `pip install Rcolor==2.0.3`
+> `pip install Rcolor==3.0.0`
 ## features
 
-- [Change foreground color](#changing-foreground-color)
-- [Change background color](#changing-background-color)
-- [Change font (style)](#changing-font-style)
-- [change foreground color for each character](#change-foreground-color-for-each-character)
+- [Change the foreground color](#changing-the-foreground-color)
+- [Change the background color](#changing-the-background-color)
+- [Change the font (style)](#changing-the-font-style)
+- [change the foreground color for each character](#change-the-foreground-color-for-each-character)
 - [Change foreground and background color at the same time](#multiple-capabilities)
 - [Change foreground and font at the same time](#multiple-capabilities)
 - [Change background and font at the same time](#multiple-capabilities)
-- [Change foreground and background color and font at the same time](#multiple-capabilities)
+- [Change foreground, background color and font at the same time](#multiple-capabilities)
 
 ---
 # Usage
@@ -40,7 +40,7 @@ from Rcolor import *
 ------
 
 ## **Important tip**
-Some terminal like cmd can't support all colors so it's better to use standard colors:
+Some terminals like cmd can't support all colors so it's better to use standard colors:
 ``` python 
 import Rcolor
 
@@ -57,7 +57,7 @@ print(Rcolor.auto_fg("Hello, World")) # Automatic random foreground color
 print(Rcolor.auto_bg("Hello, World")) # Automatic random background color
 ```
 
-## Changing foreground color
+## Changing the foreground color
 **Make Sure to check [Important tip](#important-tip)**
 ```python
 import Rcolor
@@ -66,7 +66,7 @@ print(Rcolor.foreground('Hello, World!'))  # to use 255 colors
 print(Rcolor.standard_fg("Hello, World"))  # to use standard color (15 colors).
 ```
 ----
-## Changing Background color
+## Changing the Background color
 **Make Sure to check [Important tip](#important-tip)**
 
 ```python
@@ -75,7 +75,7 @@ import Rcolor
 print(Rcolor.background('Hello, World')) # to use 255 colors
 print(Rcolor.standard_bg('Hello, World')) # to use standard color (15 colors).
 ```
-## Changing font (style)
+## Changing the font (style)
 **Make Sure to check [Important tip](#important-tip)**
 
 ```python
@@ -83,7 +83,7 @@ import Rcolor
 print(Rcolor.style('Hello, World!'))
 ```
 ---
-## Change foreground color for each character
+## Change the foreground color for each character
 **Make Sure to check [Important tip](#important-tip)**
 ```python
 import Rcolor
@@ -96,15 +96,15 @@ print(Rcolor.standard_rainbow_fg("Hello world"))
 ```python
 import Rcolor
 
-# Changes foreground color and background color at the same time
+# Changes the foreground color and background color at the same time
 Rcolor.foreground_background("Hello world")
 
-# Changes the foreground color and the font at the same time
+# Changes the the foreground color and the font at the same time
 Rcolor.foreground_style("Hello world")
 
-# Changes background color and font at the same time
+# Changes the background color and font at the same time
 Rcolor.background_style("Hello world")
 
-# Changes foreground color and background color and font at the same time
+# Changes foreground color, background color and font at the same time
 Rcolor.foreground_background_style("Hello world") 
 ```
