@@ -2,8 +2,7 @@
 
 [![CodeQL](https://github.com/beh185/RandomColorlib/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/beh185/RandomColorlib/actions/workflows/codeql.yml)
 
-https://user-images.githubusercontent.com/79264026/172701097-337571d8-23fd-45a1-8cdc-72b97acc0176.mp4
-
+https://github.com/beh185/RandomColorlib/assets/79264026/0daa3c30-3f45-4abc-8343-0d6ce11ee20b
 
 **This Python library makes your terminal output colorful ✨**\
 On this Python library, you can access 255 kinds of color randomly!
