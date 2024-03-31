@@ -1,4 +1,4 @@
-# Github: https://github.com/beh185
+# Github: https://github.com/ibehii
 # Telegram: https://T.me/dr_xz
 # e-mail: BehnamH.dev@gmail.com
 # ____________________________________________
@@ -16,7 +16,7 @@ setup(
         long_description_content_type='text/markdown',
         author='Behnam',
         author_email='Behii@tutanota.com',
-        url='https://github.com/beh185/RandomColorlib',
+        url='https://github.com/ibehii/RandomColorlib',
         license='MIT',
         keywords='Randomly change your output color',
         packages=find_packages(),
