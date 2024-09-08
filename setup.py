@@ -4,9 +4,9 @@
 # ____________________________________________
 
 from setuptools import setup, find_packages
+from pathlib import Path
 
-with open(__file__.replace('setup.py', 'README.md'), 'r') as f:
-    long_description: str = f.read()
+long_description: str = (Path(__file__).parent / "README.md").read_text()
 
 setup(
         name="Rcolor",
