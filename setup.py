@@ -10,8 +10,8 @@ long_description: str = (Path(__file__).parent / "README.md").read_text()
 
 setup(
         name="Rcolor",
-        version='3.0.0',
-        description='A library that make your output colorful in python',
+        version='3.0.1',
+        description='A library that makes your output colorful in Python',
         long_description=long_description,
         long_description_content_type='text/markdown',
         author='Behnam',
