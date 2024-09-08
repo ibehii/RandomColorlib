@@ -9,7 +9,7 @@ On this Python library, you can access 255 kinds of color randomly!
 ## YouTube Tutorial 📹
 # installation 
 For installation, enter this command in your terminal:
-> `pip install Rcolor==3.0.0`
+> `pip install Rcolor==3.0.1`
 ## features
 
 - [Change the foreground color](#changing-the-foreground-color)
