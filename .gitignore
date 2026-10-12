@@ -1,1 +1,22 @@
-Rcolor/__pycache__
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Testing and tooling
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
