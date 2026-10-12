@@ -559,7 +559,8 @@ def gradient_fg(
         user_input: Stringifiable object to colorize.
         start: Starting color as hex (e.g. '#ff007f') or RGB tuple (R, G, B).
         end: Ending color as hex (e.g. '#00f0ff') or RGB tuple (R, G, B).
-        preset: Optional gradient preset ('rainbow', 'neon', 'sunset', 'warm', 'cool', 'pastel', 'cyberpunk', 'ocean').
+        preset: Optional gradient preset ('rainbow', 'neon', 'sunset', 'warm',
+            'cool', 'pastel', 'cyberpunk', 'ocean').
 
     Returns:
         Smooth gradient styled ANSI string or plain text.

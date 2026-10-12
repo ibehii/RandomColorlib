@@ -264,13 +264,19 @@ class TestTerminal(unittest.TestCase):
         with patch("sys.stdout", mock_stdout):
             with patch("sys.platform", "win32"):
                 with patch("Rcolor.terminal._init_windows_console", return_value=True):
-                    with patch("sys.getwindowsversion", return_value=mock_win10_truecolor, create=True):
+                    with patch(
+                        "sys.getwindowsversion", return_value=mock_win10_truecolor, create=True
+                    ):
                         self.assertEqual(detect_color_level(), ColorLevel.TRUECOLOR)
 
-                    with patch("sys.getwindowsversion", return_value=mock_win10_256, create=True):
+                    with patch(
+                        "sys.getwindowsversion", return_value=mock_win10_256, create=True
+                    ):
                         self.assertEqual(detect_color_level(), ColorLevel.ANSI256)
 
-                    with patch("sys.getwindowsversion", return_value=mock_win_old, create=True):
+                    with patch(
+                        "sys.getwindowsversion", return_value=mock_win_old, create=True
+                    ):
                         self.assertEqual(detect_color_level(), ColorLevel.ANSI16)
 
     def test_modern_terminals_truecolor(self) -> None:

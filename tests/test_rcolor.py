@@ -372,7 +372,9 @@ class TestRcolorPublicAPI(unittest.TestCase):
         self.assertEqual(strip_color(""), "")
         self.assertEqual(strip_color("Plain text without color"), "Plain text without color")
         self.assertEqual(strip_color("\033[31mRed text\033[0m"), "Red text")
-        self.assertEqual(strip_color("\033[1;32;40mBold green on black\033[0m"), "Bold green on black")
+        self.assertEqual(
+            strip_color("\033[1;32;40mBold green on black\033[0m"), "Bold green on black"
+        )
         self.assertEqual(strip_color("\033[38;2;255;128;0mTrueColor\033[0m"), "TrueColor")
         self.assertEqual(strip_color("\033[38;5;208mANSI 256\033[0m"), "ANSI 256")
 

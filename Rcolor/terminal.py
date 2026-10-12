@@ -209,36 +209,10 @@ def detect_color_level() -> ColorLevel:
     if "PYCHARM_HOSTED" in env or "TERMINAL_EMULATOR" in env:
         return ColorLevel.ANSI256
 
-    # 13. Windows specific detection
-    if sys.platform == "win32" or os.name == "nt":
-        if "ANSICON" in env:
-            return ColorLevel.ANSI256
-
-        vt_ok = _init_windows_console()
-
-        # Check Windows build version for native VT support
-        if hasattr(sys, "getwindowsversion"):
-            try:
-                win_ver = sys.getwindowsversion()
-                # Windows 10 build 14931+ supports 24-bit TrueColor
-                if win_ver.major > 10 or (win_ver.major == 10 and win_ver.build >= 14931):
-                    return ColorLevel.TRUECOLOR
-                # Windows 10 build 10586+ supports 256 colors
-                if win_ver.major == 10 and win_ver.build >= 10586:
-                    return ColorLevel.ANSI256
-            except Exception:
-                pass
-
-        # If VT or colorama was enabled on older Windows
-        if vt_ok:
-            return ColorLevel.ANSI16
-        # If neither VT nor colorama could be enabled, disable color to avoid raw escape codes
-        return ColorLevel.NONE
-
-    # 14. SSH sessions
+    # 13. SSH sessions
     is_ssh = "SSH_CONNECTION" in env or "SSH_CLIENT" in env or "SSH_TTY" in env
 
-    # 15. TERM string matching
+    # 14. Explicit TERM string matching (e.g. xterm-256color, tmux, kitty)
     if "direct" in term or "truecolor" in term or "24bit" in term:
         return ColorLevel.TRUECOLOR
 
@@ -279,11 +253,37 @@ def detect_color_level() -> ColorLevel:
     ):
         return ColorLevel.ANSI16
 
+    # 15. Windows console specific detection (when TERM is not explicitly set)
+    if sys.platform == "win32" or os.name == "nt":
+        if "ANSICON" in env:
+            return ColorLevel.ANSI256
+
+        vt_ok = _init_windows_console()
+
+        # Check Windows build version for native VT support
+        if hasattr(sys, "getwindowsversion"):
+            try:
+                win_ver = sys.getwindowsversion()
+                # Windows 10 build 14931+ supports 24-bit TrueColor
+                if win_ver.major > 10 or (win_ver.major == 10 and win_ver.build >= 14931):
+                    return ColorLevel.TRUECOLOR
+                # Windows 10 build 10586+ supports 256 colors
+                if win_ver.major == 10 and win_ver.build >= 10586:
+                    return ColorLevel.ANSI256
+            except Exception:
+                pass
+
+        # If VT or colorama was enabled on older Windows
+        if vt_ok:
+            return ColorLevel.ANSI16
+        # If neither VT nor colorama could be enabled, disable color to avoid raw escape codes
+        return ColorLevel.NONE
+
     # If SSH session with generic/unspecified terminal, default to ANSI16
     if is_ssh and is_tty:
         return ColorLevel.ANSI16
 
-    # 15. Fallback
+    # 16. Fallback
     if is_clicolor_forced:
         return ColorLevel.ANSI16
     return ColorLevel.ANSI16 if is_tty else ColorLevel.NONE

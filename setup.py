@@ -11,7 +11,10 @@ long_description = (
 setup(
     name="Rcolor",
     version="3.1.0",
-    description="High-performance Python library for colorful terminal output with automatic terminal capability detection",
+    description=(
+        "High-performance Python library for colorful terminal output "
+        "with automatic terminal capability detection"
+    ),
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Behnam",
